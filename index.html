@@ -1,11 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zakaria Daas - Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d8ab4a7d2a.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: rgb(1, 1, 35);
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .image-container:hover .image {
+        opacity: 0.3;
+      }
+
+      .image-container:hover .middle {
+        opacity: 1;
+      }
+
+      .text {
+        color: white;
+        font-size: 16px;
+      }
+    </style>
   </head>
-  <body>
-    <h1>Zakaria Daas</h1>
+  <body class="container-fluid text-white">
+    <!-- NavBar -->
+    <nav
+      class="navbar navbar-expand-lg p-3 border-bottom border-white"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3" href="">Zakaria</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#projects">Projects</a>
+            </li>
+          </ul>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      id="hero"
+      class="d-flex justify-content-center align-items-center m-5 pt-5"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <h1
+            class="mb-5 text-light"
+            id="typewriter"
+            style="font-size: 3rem; min-height: 150px"
+          ></h1>
+          <p style="font-size: 1.3rem">
+            I excel in learning quickly and finding effective solutions. I have
+            experience with Python, Django, MySQL, and many other modern
+            technologies. I work well in technical environments and regularly
+            provide reliable and efficient solutions.
+          </p>
+          <a
+            href="resume.pdf"
+            download
+            class="btn btn-lg btn-outline-light my-5"
+            ><i class="fa-solid fa-download me-3"></i>Download My Resume</a
+          >
+        </div>
+        <div class="d-flex justify-content-center align-items-center col-lg-6">
+          <img src="programming.jpg" alt="Programming" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="row m-5 text-center">
+      <div class="d-flex flex-column justify-content-around col-lg-6">
+        <div>
+          <h1>About Me</h1>
+          <hr />
+          <p>
+            I am an enthusiastic back-end developer with a strong background in
+            Python, Django, and MySQL. I've developed reliable web applications
+            with a focus on functionality and reliability. I take pleasure in
+            finding solutions to challenging issues and making sure that users
+            have a seamless experience. I have a solid academic background and a
+            number of professional qualifications, and I'm committed to further
+            education and development in the web development industry. Whether
+            I'm working on a brand-new project or improving an old one, my goal
+            is to provide excellent solutions that go above and beyond for
+            users.
+          </p>
+        </div>
+        <!-- <div class="row bg-light text-dark">
+          <div class="col-sm-3 border p-4">14+<br />Parnters</div>
+          <div class="col-sm-3 border p-4">15+<br />Projects Done</div>
+          <div class="col-sm-3 border p-4">89+<br />Happy Clients</div>
+          <div class="col-sm-3 border p-4">150+<br />Meetings</div>
+        </div> -->
+      </div>
+      <div class="col-lg-6 p-3">
+        <img src="about.jpg" alt="Programming" class="img-fluid" />
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="bsb-skill-1 py-3 py-md-5 text-center m-5">
+      <h1 class="mb-4">Skills</h1>
+      <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/python.png" alt="Python" class="img-fluid" />
+              <h5 class="card-title">Python</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/js.png" alt="JavaScript" class="img-fluid" />
+              <h5 class="card-title">JavaScript</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/django.png" alt="Django" class="img-fluid" />
+              <h5 class="card-title">Django</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/react.png" alt="React" class="img-fluid" />
+              <h5 class="card-title">React</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img
+                src="skills/bootstrap.png"
+                alt="Bootstrap"
+                class="img-fluid"
+              />
+              <h5 class="card-title">Bootstrap</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/html.png" alt="HTML" class="img-fluid" />
+              <h5 class="card-title">HTML</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/css.png" alt="CSS" class="img-fluid" />
+              <h5 class="card-title">CSS</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/mysql.png" alt="MySQL" class="img-fluid" />
+              <h5 class="card-title">MySQL</h5>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/git.png" alt="Git" class="img-fluid" />
+              <h5 class="card-title">Git</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-body">
+              <img src="skills/docker.png" alt="Docker" class="img-fluid" />
+              <h5 class="card-title">Docker</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="m-5 py-3">
+      <h1 class="text-center">My Projects</h1>
+      <hr />
+      <div class="row">
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img
+              src="projects/ssltest.png"
+              alt="ssltest"
+              class="image img-fluid"
+            />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">SSL Test</div>
+              <div class="text">Secure your website with SSL.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img
+              src="projects/littlelemon.png"
+              alt="littlelemon"
+              class="image img-fluid"
+            />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">Little Lemon</div>
+              <div class="text">A fresh restaurant app.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img src="projects/news.png" alt="news" class="image img-fluid" />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">News</div>
+              <div class="text">Stay updated with the latest news.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img
+              src="projects/reservations.png"
+              alt="reservations"
+              class="image img-fluid"
+            />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">Reservations</div>
+              <div class="text">Reserve rooms online.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img
+              src="projects/todolist.png"
+              alt="todo list"
+              class="image img-fluid"
+            />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">Todo List</div>
+              <div class="text">Organize personal todo lists and tasks.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-3">
+          <div class="image-container">
+            <img
+              src="projects/portfolio.png"
+              alt="portfolio"
+              class="image img-fluid"
+            />
+            <div class="middle">
+              <div class="text fs-5 fw-bold">Portfolio</div>
+              <div class="text">Showcase of my best work.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="m-5 text-center">
+      <h1>Contact Me</h1>
+      <hr />
+      <div id="contact" class="row bg-light text-dark fs-5 mb-3">
+        <div class="col-md-6 col-xxl-4 border p-4">
+          <i class="fa-solid fa-location-dot me-3"></i>Constantine, Algeria
+        </div>
+        <div class="col-md-6 col-xxl-4 border p-4">
+          <i class="fa-solid fa-phone me-3"></i>Phone: +213 795 706 201
+        </div>
+        <div class="col-xxl-4 border p-4">
+          <i class="fa-solid fa-envelope me-3"></i>Email:
+          zakariadaas712@gmail.com
+        </div>
+      </div>
+      <p>Let's get in touch. Send me a message:</p>
+      <a
+        href="mailto:zakariadaas712@gmail.com?subject=Message%20from%20Website"
+        class="btn bg-light text-dark p-3"
+      >
+        <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4 border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="list-inline-item">⋅</li>
+              <li class="list-inline-item">
+                <a href="#skills" class="nav-link">Skills</a>
+              </li>
+              <li class="list-inline-item">⋅</li>
+              <li class="list-inline-item">
+                <a href="#projects" class="nav-link">Projects</a>
+              </li>
+              <li class="list-inline-item">⋅</li>
+              <li class="list-inline-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <p class="small mb-4 mb-lg-0">&copy; All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item me-4">
+                <a
+                  href="https://github.com/Zakaria-Daas"
+                  target="_blank"
+                  class="nav-link"
+                >
+                  <i class="fa-brands fa-github fs-3"></i
+                ></a>
+              </li>
+              <li class="list-inline-item me-4">
+                <a
+                  href="https://www.linkedin.com/in/zakaria-daas-58417228b"
+                  target="_blank"
+                  class="nav-link"
+                  ><i class="fa-brands fa-linkedin fs-3"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://x.com/zakaria_daas"
+                  target="_blank"
+                  class="nav-link"
+                >
+                  <i class="fa-brands fa-x-twitter fs-3"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script>
+    // Assuming you have a <div> with an id "typewriter" in your HTML
+    var container = document.getElementById("typewriter");
+    var lines = ["Hi, I am Zakaria,", "Backend Developer"]; // Add your lines of text here
+    var lineIndex = 0;
+    var charIndex = 0;
+
+    function typeWriter() {
+      if (lineIndex < lines.length) {
+        if (charIndex < lines[lineIndex].length) {
+          container.innerHTML += lines[lineIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 100); // Adjust the typing speed by changing the timeout value
+        } else {
+          if (lineIndex < lines.length - 1) {
+            container.innerHTML += "<br>"; // Adds a line break in HTML
+          }
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeWriter, 500); // Wait a bit before starting the next line
+        }
+      }
+    }
+
+    // Call the typeWriter function to start the effect
+    typeWriter();
+  </script>
 </html>
